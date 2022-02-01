@@ -116,7 +116,7 @@ impl ChainInfo for ParachainTemplateChainInfo {
 	}
 }
 
-fn main() -> Result<(), Box<dyn std::error::Error>>{
+fn main() -> Result<(), Box<dyn std::error::Error>> {
 	substrate_simnode::parachain_node::<ParachainTemplateChainInfo, _, _>(|node| async move {
 		// submit extrinsics to the tx pool.
 		let alice = MultiSigner::from(Alice.public()).into_account();
