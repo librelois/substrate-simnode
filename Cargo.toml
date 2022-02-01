@@ -9,7 +9,8 @@ publish = false
 members = ["examples/standalone", "examples/parachain"]
 
 [dependencies]
-# client deps
+
+# substrate
 sc-executor = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
 sc-service = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
 sc-informant = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
@@ -29,8 +30,6 @@ sc-transaction-pool-api = { git = "https://github.com/purestake/substrate", bran
 sc-client-api = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
 sc-rpc-server = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
 manual-seal = { package = "sc-consensus-manual-seal", git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
-
-# primitive deps
 sp-core = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
 sp-blockchain = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
 sp-block-builder = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
@@ -46,11 +45,9 @@ sp-externalities = { git = "https://github.com/purestake/substrate", branch = "m
 sp-state-machine = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
 sp-wasm-interface = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
 sp-runtime-interface = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
-
-# pallets
 frame-system = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.13" }
 
-# parachain stuff
+# cumulus
 parachain-inherent = { package = "cumulus-primitives-parachain-inherent", git = "https://github.com/purestake/cumulus", branch = "moonbeam-polkadot-v0.9.13" }
 parachain-system = { package = "cumulus-pallet-parachain-system", git = "https://github.com/purestake/cumulus", branch = "moonbeam-polkadot-v0.9.13" }
 sproof-builder = { package = "cumulus-test-relay-sproof-builder", git = "https://github.com/purestake/cumulus", branch = "moonbeam-polkadot-v0.9.13" }
@@ -59,14 +56,12 @@ parachain-info = { git = "https://github.com/purestake/cumulus", branch = "moonb
 # polkadot
 polkadot-primitives = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.13" }
 
-# others
+# crates.io
 codec = { package = "parity-scale-codec", version = "2.0.0" }
-log = "0.4.8"
 futures = "0.3.16"
-tokio = { version = "1.13", features = ["signal"] }
-
-# Calling RPC
 jsonrpc-core = "18.0"
+tokio = { version = "1.13", features = ["signal"] }
+log = "0.4.8"
 num-traits = "0.2.14"
 
 [features]
